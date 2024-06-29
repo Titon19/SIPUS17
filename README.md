@@ -11,13 +11,13 @@ PHP : v8.2+
 
 # Akun Login:
 1. Administrator:
-    -username : admin
-    -password : admin
+    - username : admin
+    - password : admin
 
 2. Petugas :
-    -username : petugas
-    -password : petugas
+    - username : petugas
+    - password : petugas
 
 3. Anggota :
-    -Username (Mana aja sesuai usernamenya, cek aja di bagian hak akses admin
-    -Password : 123
+    - Username (Mana aja sesuai usernamenya, cek aja di bagian data user hak akses admin)
+    - Password : 123
