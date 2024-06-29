@@ -1,5 +1,5 @@
 <?php
-include('../koneksi.php');
+include ('../koneksi.php');
 session_start();
 
 // cek apakah yang mengakses halaman ini sudah login
@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $id_user = $_POST['id_user'];
     $nama = $_POST['nama'];
     $username = $_POST['username'];
-    $pass = $_POST['pass'];
+    $pass = md5($_POST['pass']);
     $level = $_POST['level'];
 
     $query = mysqli_query($koneksi, "UPDATE users SET nama='$nama', username='$username', password='$pass', level='$level' WHERE id_user = '$id_user'");
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body class="sb-nav-fixed">
-    <?php include("../admin/navbar.php"); ?>
+    <?php include ("../admin/navbar.php"); ?>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">

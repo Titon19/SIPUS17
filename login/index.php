@@ -6,9 +6,10 @@ if (isset($_SESSION['nomor_anggota_baru'])) {
     $nomorAnggotaBaru = $_SESSION['nomor_anggota_baru'];
     unset($_SESSION['nomor_anggota_baru']); // Hapus nomor anggota baru dari session agar tidak ditampilkan lagi setelah refresh
 }
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']); // Enkripsi password dengan MD5
 
     // Login sebagai Admin atau Petugas
     $login = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username' AND password='$password'");

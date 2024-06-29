@@ -1,5 +1,5 @@
 <?php
-include('../koneksi.php');
+include ('../koneksi.php');
 session_start();
 
 // cek apakah yang mengakses halaman ini sudah login
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $tgl_lahir = $_POST['tgl_lahir'];
     $no_wa = $_POST['no_wa'];
     $alamat = $_POST['alamat'];
-    $password = $_POST['pass'];
+    $password = md5($_POST['pass']);
 
     $query = mysqli_query($koneksi, "INSERT INTO anggota (id_anggota, nisn, nama, jurusan, jk, tempat_lhir, tgl_lahir, no_wa, alamat, password) 
                   VALUES ('$no_anggota', '$nisn', '$nama', '$jurusan', '$jk', '$tempat_lhir', '$tgl_lahir', '$no_wa', '$alamat', '$password')");
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body class="sb-nav-fixed">
-    <?php include("../admin/navbar.php"); ?>
+    <?php include ("../admin/navbar.php"); ?>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">

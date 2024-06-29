@@ -1,5 +1,5 @@
 <?php
-include('../koneksi.php');
+include ('../koneksi.php');
 session_start();
 
 // cek apakah yang mengakses halaman ini sudah login
@@ -12,7 +12,7 @@ if ($_SESSION['level'] == "") {
 if (isset($_POST['submit'])) {
     $nama = $_POST['nama'];
     $username = $_POST['username'];
-    $pass = $_POST['pass'];
+    $pass = md5($_POST['pass']);
     $level = $_POST['level'];
 
     $query = mysqli_query($koneksi, "INSERT INTO users (nama, username, password, level) 
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body class="sb-nav-fixed">
-    <?php include("../admin/navbar.php"); ?>
+    <?php include ("../admin/navbar.php"); ?>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">

@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $tgl_lahir = $_POST['tgl_lahir'];
     $no_wa = $_POST['no_wa'];
     $alamat = $_POST['alamat'];
-    $password = $_POST['pass'];
+    $password = md5($_POST['pass']);
     $no_anggota = $_POST['no_anggota'];
 
     if (isset($_SESSION['nomor_anggota_baru'])) {

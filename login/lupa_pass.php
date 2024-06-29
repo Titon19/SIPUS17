@@ -1,11 +1,11 @@
 <?php
-include('../koneksi.php');
+include ('../koneksi.php');
 
 if (isset($_POST['submit'])) {
     $no_anggota = $_POST['no_anggota'];
     $no_wa = $_POST['no_wa'];
-    $password = $_POST['pass'];
-    $passKonfirm = $_POST['pass_konfirm'];
+    $password = md5($_POST['pass']);
+    $passKonfirm = md5($_POST['pass_konfirm']);
 
     if ($password != $passKonfirm) {
         echo "<script language='JavaScript'>alert('Password baru dan konfirmasi password harus sama!');</script>";
