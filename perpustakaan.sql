@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2024 at 11:52 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.3.33
+-- Generation Time: Jun 29, 2024 at 05:51 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,39 +37,39 @@ CREATE TABLE `anggota` (
   `tgl_lahir` date DEFAULT NULL,
   `no_wa` varchar(14) DEFAULT NULL,
   `alamat` varchar(255) DEFAULT NULL,
-  `password` varchar(16) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `password` varchar(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `anggota`
 --
 
 INSERT INTO `anggota` (`id_anggota`, `nisn`, `nama`, `jurusan`, `jk`, `tempat_lhir`, `tgl_lahir`, `no_wa`, `alamat`, `password`) VALUES
-('A240001', '0066792922', 'ADE GUNAWAN', 'AK', 'L', 'SERANG', '2006-07-22', '089651562107', 'KP. KEMERANGGEN KEL. TAMAN BARU KEC. TAKTAKAN', '123'),
-('A240002', '0062167723', 'AHMAD ALI MAHFUD', 'AK', 'L', 'SERANG', '2006-10-25', '087889348548', 'KALIWADAS KEL. LOPANG KOTA SERANG', '123'),
-('A240003', '0062167747', 'AHMAD SAEHUNA MULYA', 'AK', 'L', 'GARUT', '2006-04-28', '087889348548', 'LINK. PEKARUNGAN', '123'),
-('A240004', '0064223961', 'ANISSA FITRIYANI', 'AK', 'P', 'SERANG', '2006-11-23', '087889348548', 'LONTAR BARU 001/002 KOTA SERANG', '123'),
-('A240005', '0066790189', 'ASRI WINDRIATI', 'AK', 'P', 'KARANGANYAR', '2006-04-29', '087889348548', 'JATIOSO 015/013 KAB.KARANGANYAR', '123'),
-('A240006', '0068972314', 'DESMIRANTI RAHMA', 'AK', 'P', 'SERANG', '2006-12-26', '087889348548', 'LINK. PABUARAN TIMUR 005/004 UNYUR', '123'),
-('A240007', '0063814881', 'DEWI TRI UTAMI', 'AK', 'P', 'SERANG', '2006-03-02', '087889348548', 'KP. SARONGGE KEL.KAMANISAN KEC.CURUG', '123'),
-('A240008', '0058249530', 'FADLI FIRMANSYAH', 'AK', 'L', 'SERANG', '2005-01-27', '087889348548', 'KURANJI 001/001 TAKTAKAN KOTA SERANG', '123'),
-('A240009', '0066790219', 'HADIS AZAHRA SAIDINA', 'AK', 'P', 'SERANG', '2006-11-07', '087889348548', 'SINDANG SARI KEC.PABUARAN', '123'),
-('A240010', '0069471180', 'IFANA', 'AK', 'P', 'SERANG', '2006-03-31', '087889348548', 'KP.KALIMIRING 001/006 UNYUR - SERANG', '123'),
-('A240011', '0059935005', 'INTAN TANTIVA DAMAS', 'AK', 'P', 'SERANG', '2005-01-15', '087889348548', 'CIPARE RANJENG JAYA 02/06', '123'),
-('A240012', '0063980464', 'IRFAN MAULANA', 'AK', 'L', 'SERANG', '2006-05-03', '087889348548', 'KP KEGANTERAN 01/05 KEL. KASEMEN', '123'),
-('A240013', '0069471183', 'ISNAWATI', 'AK', 'P', 'SERANG', '2006-10-11', '087889348548', 'KP. SEPANG BARU 001/005', '123'),
-('A240014', '0062095430', 'JUMANTI', 'AK', 'P', 'SERANG', '2006-05-14', '087889348548', 'KARUNDANG 005/004 CIPOCOK JAYA', '123'),
-('A240015', '0059160109', 'KAMILIA ANJELI', 'AK', 'P', 'CILEGON', '2005-12-19', '087889348548', 'KAUJON PASAR SORE SERANG - BANTEN', '123'),
-('A240016', '0065810102', 'KHOLIDAHSIAH', 'AK', 'P', 'SERANG', '2006-12-28', '087889348548', 'LIALANG TENGAH 006/005 TAKTAKAN', '123'),
-('A240017', '0065810101', 'MOHAMMAD IKHSAN SOLEHUDIN', 'AK', 'L', 'SERANG', '2006-05-07', '087889348548', 'TAMAN ANGSOKA PERMAI 03/08 KASEMEN', '123'),
-('A240018', '0064866345', 'MUHAMMAD HAZRIL', 'AK', 'L', 'SERANG', '2006-07-07', '087889348548', 'KURANJI 001/001 TAKTAKAN KOTA SERANG', '123'),
-('A240019', '0060244453', 'MUHAMMAD RAFLY RAMDANA MEIPUTR', 'AK', 'L', 'SERANG', '2006-05-21', '087889348548', 'TEMBONG PABUARAN 003/007', '123'),
-('A240020', '0064959074', 'MUHAMMAD RIZKI', 'AK', 'L', 'SERANG', '2006-04-16', '087889348548', 'BENGGALA CIPARE', '123'),
-('A240021', '0055972661', 'NOVA RIYANA', 'AK', 'P', 'SERANG', '2005-06-13', '087889348548', 'KELAPA DUA', '123'),
-('A240022', '0065669516', 'NUR HASANAH', 'AK', 'P', 'SERANG', '2006-03-25', '087889348548', 'GELAM CIPOCOK JAYA', '123'),
-('A240023', '0065971775', 'PUTRI YULIANTI', 'AK', 'P', 'SERANG', '2006-07-04', '087889348548', 'KALIWADAS KEL. LOPANG KOTA SERANG', '123'),
-('A240024', '0065950183', 'RETNO DWI HASTUTI', 'AK', 'P', 'SERANG', '2006-12-28', '087889348548', 'KELAPA DUA 001/012KAGUNGAN', '123'),
-('A240025', '0066135368', 'RINA LUSINA', 'AK', 'P', 'SERANG', '2006-11-25', '087889348548', 'KEL.GELAM KEC.CIPOCOK JAYA - SERANG', '123'),
+('A240001', '0066792922', 'ADE GUNAWAN', 'AK', 'L', 'SERANG', '2006-07-22', '089651562107', 'KP. KEMERANGGEN KEL. TAMAN BARU KEC. TAKTAKAN', '202cb962ac59075b964b07152d234b70'),
+('A240002', '0062167723', 'AHMAD ALI MAHFUD', 'AK', 'L', 'SERANG', '2006-10-25', '087889348548', 'KALIWADAS KEL. LOPANG KOTA SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240003', '0062167747', 'AHMAD SAEHUNA MULYA', 'AK', 'L', 'GARUT', '2006-04-28', '087889348548', 'LINK. PEKARUNGAN', '202cb962ac59075b964b07152d234b70'),
+('A240004', '0064223961', 'ANISSA FITRIYANI', 'AK', 'P', 'SERANG', '2006-11-23', '087889348548', 'LONTAR BARU 001/002 KOTA SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240005', '0066790189', 'ASRI WINDRIATI', 'AK', 'P', 'KARANGANYAR', '2006-04-29', '087889348548', 'JATIOSO 015/013 KAB.KARANGANYAR', '202cb962ac59075b964b07152d234b70'),
+('A240006', '0068972314', 'DESMIRANTI RAHMA', 'AK', 'P', 'SERANG', '2006-12-26', '087889348548', 'LINK. PABUARAN TIMUR 005/004 UNYUR', '202cb962ac59075b964b07152d234b70'),
+('A240007', '0063814881', 'DEWI TRI UTAMI', 'AK', 'P', 'SERANG', '2006-03-02', '087889348548', 'KP. SARONGGE KEL.KAMANISAN KEC.CURUG', '202cb962ac59075b964b07152d234b70'),
+('A240008', '0058249530', 'FADLI FIRMANSYAH', 'AK', 'L', 'SERANG', '2005-01-27', '087889348548', 'KURANJI 001/001 TAKTAKAN KOTA SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240009', '0066790219', 'HADIS AZAHRA SAIDINA', 'AK', 'P', 'SERANG', '2006-11-07', '087889348548', 'SINDANG SARI KEC.PABUARAN', '202cb962ac59075b964b07152d234b70'),
+('A240010', '0069471180', 'IFANA', 'AK', 'P', 'SERANG', '2006-03-31', '087889348548', 'KP.KALIMIRING 001/006 UNYUR - SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240011', '0059935005', 'INTAN TANTIVA DAMAS', 'AK', 'P', 'SERANG', '2005-01-15', '087889348548', 'CIPARE RANJENG JAYA 02/06', '202cb962ac59075b964b07152d234b70'),
+('A240012', '0063980464', 'IRFAN MAULANA', 'AK', 'L', 'SERANG', '2006-05-03', '087889348548', 'KP KEGANTERAN 01/05 KEL. KASEMEN', '202cb962ac59075b964b07152d234b70'),
+('A240013', '0069471183', '', 'AK', 'P', 'SERANG', '2006-10-11', '087889348548', 'KP. SEPANG BARU 001/005', '202cb962ac59075b964b07152d234b70'),
+('A240014', '0062095430', 'JUMANTI', 'AK', 'P', 'SERANG', '2006-05-14', '087889348548', 'KARUNDANG 005/004 CIPOCOK JAYA', '202cb962ac59075b964b07152d234b70'),
+('A240015', '0059160109', 'KAMILIA ANJELI', 'AK', 'P', 'CILEGON', '2005-12-19', '087889348548', 'KAUJON PASAR SORE SERANG - BANTEN', '202cb962ac59075b964b07152d234b70'),
+('A240016', '0065810102', 'KHOLIDAHSIAH', 'AK', 'P', 'SERANG', '2006-12-28', '087889348548', 'LIALANG TENGAH 006/005 TAKTAKAN', '202cb962ac59075b964b07152d234b70'),
+('A240017', '0065810101', 'MOHAMMAD IKHSAN SOLEHUDIN', 'AK', 'L', 'SERANG', '2006-05-07', '087889348548', 'TAMAN ANGSOKA PERMAI 03/08 KASEMEN', '202cb962ac59075b964b07152d234b70'),
+('A240018', '0064866345', 'MUHAMMAD HAZRIL', 'AK', 'L', 'SERANG', '2006-07-07', '087889348548', 'KURANJI 001/001 TAKTAKAN KOTA SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240019', '0060244453', 'MUHAMMAD RAFLY RAMDANA MEIPUTR', 'AK', 'L', 'SERANG', '2006-05-21', '087889348548', 'TEMBONG PABUARAN 003/007', '202cb962ac59075b964b07152d234b70'),
+('A240020', '0064959074', 'MUHAMMAD RIZKI', 'AK', 'L', 'SERANG', '2006-04-16', '087889348548', 'BENGGALA CIPARE', '202cb962ac59075b964b07152d234b70'),
+('A240021', '0055972661', 'NOVA RIYANA', 'AK', 'P', 'SERANG', '2005-06-13', '087889348548', 'KELAPA DUA', '202cb962ac59075b964b07152d234b70'),
+('A240022', '0065669516', 'NUR HASANAH', 'AK', 'P', 'SERANG', '2006-03-25', '087889348548', 'GELAM CIPOCOK JAYA', '202cb962ac59075b964b07152d234b70'),
+('A240023', '0065971775', 'PUTRI YULIANTI', 'AK', 'P', 'SERANG', '2006-07-04', '087889348548', 'KALIWADAS KEL. LOPANG KOTA SERANG', '202cb962ac59075b964b07152d234b70'),
+('A240024', '0065950183', 'RETNO DWI HASTUTI', 'AK', 'P', 'SERANG', '2006-12-28', '087889348548', 'KELAPA DUA 001/012KAGUNGAN', '202cb962ac59075b964b07152d234b70'),
+('A240025', '0066135368', 'RINA LUSINA', 'AK', '', 'SERANG', '2006-11-25', '087889348548', 'KEL.GELAM KEC.CIPOCOK JAYA - SERANG', '202cb962ac59075b964b07152d234b70'),
 ('A240026', '0062977729', 'RISKA AMELIA', 'AK', 'P', 'CILEGON', '2006-06-26', '087889348548', 'KEL. CIPARE KEC. SERANG KOTA SERANG', '123'),
 ('A240027', '0059867922', 'RIZKY RAHMAT', 'AK', 'L', 'SERANG', '2005-01-11', '087889348548', 'LINK. SEPANG SUSUKAN 003/006 KEL. SERANG KEC. SERANG', '123'),
 ('A240028', '0057426084', 'ROSA DAMAYANTI', 'AK', 'P', 'SERANG', '2005-01-15', '087889348548', 'SINDANG SARI KEC.PABUARAN', '123'),
@@ -388,13 +388,13 @@ INSERT INTO `anggota` (`id_anggota`, `nisn`, `nama`, `jurusan`, `jk`, `tempat_lh
 ('A240341', '0064926575', 'ZAHRA MARYATUL FADHILAH', 'PM', 'P', 'SERANG', '2006-02-20', '0895603231643', 'KAMPUNG KAUJON KIDUL SERANG', '123'),
 ('A240342', '0063277845', 'AANG KHUNAEFI', 'AK', 'L', 'MENGGALA', '2006-09-27', '0895603231643', 'MENGGALA KOTA, TULANG BAWANG LAMPUNG', '123'),
 ('A240343', '0072444968', 'ADRIAN FIRMANSYAH', 'AK', 'L', 'SERANG', '2007-11-02', '0895603231643', 'KOMP. CITRA GADING BLOK F10, KEL. CIPOCOK, SERANG', '123'),
-('A240344', '0077536040', 'ADRIAN RAMADAN', 'AK', 'L', 'RANGKASBITUNG', '2007-10-20', '0895603231643', 'JL. NUNUNG BAKRI RT/RW 03/02, KEL. KOTA BARU, KEC. SERANG, SERANG', '123'),
+('A240344', '0077536040', 'ADRIAN RAMADAN', 'AK', 'L', 'RANGKASBITUNG', '2007-10-20', '0895603231643', 'JL. NUNUNG BAKRI RT/RW 03/02, KEL. KOTA BARU, KEC. SERANG, SERANG', '123');
+INSERT INTO `anggota` (`id_anggota`, `nisn`, `nama`, `jurusan`, `jk`, `tempat_lhir`, `tgl_lahir`, `no_wa`, `alamat`, `password`) VALUES
 ('A240345', '0069339801', 'ANNISA DEWI PUSPITASARI', 'AK', 'P', 'SERANG', '2006-07-29', '0895603231643', 'LINK. GURUGUI KS, KEL. LIALANG, KEC. TAKTAKAN, SERANG', '123'),
 ('A240346', '0076217865', 'DELLA APRILLIA', 'AK', 'P', 'SERANG', '2007-04-09', '0895603231643', 'KOMP. PANJUNAN INDAH, KEL. BANTEN, KEC. KASEMEN, SERANG', '123'),
 ('A240347', '0063138184', 'FANI SALSABILLAH', 'AK', 'P', 'SERANG', '2006-07-29', '0895603231643', 'CIMUNCANG CILIK, KEL. CIMUNCANG CILIK, SERANG', '123'),
 ('A240348', '0063138180', 'FAUZA PUTRI BALQIS', 'AK', 'P', 'SERANG', '2006-01-12', '0895603231643', 'KP. KURANJI, KEL. KURANJI, KEC. TAKTAKAN, SERANG', '123'),
-('A240349', '0069794649', 'FEBRIANSAH', 'AK', 'L', 'SERANG', '2006-02-22', '0895603231643', 'KP. KAMALAKA KEL. PANGGUNGJATI KEC. TAKTAKAN', '123');
-INSERT INTO `anggota` (`id_anggota`, `nisn`, `nama`, `jurusan`, `jk`, `tempat_lhir`, `tgl_lahir`, `no_wa`, `alamat`, `password`) VALUES
+('A240349', '0069794649', 'FEBRIANSAH', 'AK', 'L', 'SERANG', '2006-02-22', '0895603231643', 'KP. KAMALAKA KEL. PANGGUNGJATI KEC. TAKTAKAN', '123'),
 ('A240350', '0076936224', 'FINGKA RIZKIA', 'AK', 'P', 'SERANG', '2007-01-12', '0895603231643', 'LINK. SEPANG KELAPA, KEL. SEPANG, KEC. TAKTAKAN SERANG', '123'),
 ('A240351', '0074149667', 'HANA SEPTIANA', 'AK', 'P', 'SERANG', '2007-07-05', '0895603231643', 'KP. PASIR GADUNG TENGAH, KEL. CILOWONG, KEC. TAKTAKAN, SERANG', '123'),
 ('A240352', '0071595839', 'IMROHATUL NAKIYAH', 'AK', 'P', 'SERANG', '2007-03-16', '0895603231643', 'KP. KRAPCAK, KEL. WANAYASA, KEC. KRAMATWATU, SERANG', '123'),
@@ -405,7 +405,9 @@ INSERT INTO `anggota` (`id_anggota`, `nisn`, `nama`, `jurusan`, `jk`, `tempat_lh
 ('A240357', '112', 'zdn', 'PM', 'L', 'Serang', '2024-02-10', '087889348548', 'serang', '123'),
 ('A240358', '22222', 'Pak Sulis', 'AK', 'L', 'SERANG', '2024-02-12', '081311341404', 'serang', '123'),
 ('A240359', '223333232', 'Pak Thoha', 'AK', 'L', 'SERANG', '2024-02-12', '087808194057', 'serang', '123'),
-('A240360', '22222', 'Pak Thoha', 'AK', 'L', 'SERANG', '2024-02-12', '087808194057', 'serang', '123');
+('A240360', '22222', 'Pak Thoha', 'AK', 'L', 'SERANG', '2024-02-12', '087808194057', 'serang', '123'),
+('A240361', '21312314', 'Titon', 'AK', 'L', 'Serang', '2024-02-12', '087889348548', 'Serang', '123'),
+('A240362', '11120022', 'Levi', 'AP', 'L', 'Serang', '2024-02-12', '087889348548', 'serang', '123');
 
 -- --------------------------------------------------------
 
@@ -423,14 +425,14 @@ CREATE TABLE `buku` (
   `isbn` varchar(30) DEFAULT NULL,
   `rak` varchar(30) DEFAULT NULL,
   `jumlah` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `buku`
 --
 
 INSERT INTO `buku` (`id_buku`, `judul`, `id_kategori`, `pengarang`, `penerbit`, `tahun`, `isbn`, `rak`, `jumlah`) VALUES
-('BKU001', 'Pendidikan Agama Islam dan Budi Pekerti Kelas X', 4, 'Ahmad Taufik, Nurwastuti, Setyowati', 'Gino Guru Putra', '2019', '9786022445463', '01', 29),
+('BKU001', 'Pendidikan Agama Islam dan Budi Pekerti Kelas X', 4, 'Ahmad Taufik, Nurwastuti, Setyowati', 'Gino Guru Putra', '2019', '9786022445463', '01', 28),
 ('BKU002', 'Pendidikan Agama Islam dan Budi Pekerti Kelas XI', 4, 'Ahmad Taufik, Nurwastuti, Setyowati', 'Gino Guru Putra', '2019', '978-6022445463', '01', 38),
 ('BKU003', 'Pendidikan Agama Islam dan Budi Pekerti Kelas XII', 4, 'Ahmad Taufik, Nurwastuti, Setyowati', 'Gino Guru Putra', '2019', '9786022445463', '01', 38),
 ('BKU004', 'Pendidikan Pancasila dan Kewarganegaraaan Kelas X', 4, 'Hatim Gazali, Abdul Waidl, Tedi Kholiluddin, Ali Usman, Ahmad Asroni', 'Gino Guru Putra', '2019', '9786022443308', '01', 38),
@@ -536,7 +538,7 @@ CREATE TABLE `buku_masuk` (
   `id_buku` varchar(50) DEFAULT NULL,
   `tgl_masuk` timestamp(6) NULL DEFAULT current_timestamp(6),
   `qty` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `buku_masuk`
@@ -557,7 +559,7 @@ INSERT INTO `buku_masuk` (`id_masuk`, `id_buku`, `tgl_masuk`, `qty`) VALUES
 CREATE TABLE `kategori` (
   `id_kategori` int(11) NOT NULL,
   `kategori` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kategori`
@@ -580,7 +582,7 @@ CREATE TABLE `kunjungan` (
   `id_kunjungan` int(11) NOT NULL,
   `nama` varchar(30) DEFAULT NULL,
   `waktu` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kunjungan`
@@ -618,7 +620,7 @@ CREATE TABLE `peminjaman` (
   `denda` int(11) DEFAULT NULL,
   `status` varchar(30) DEFAULT 'Dipinjam',
   `qty` int(11) DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `peminjaman`
@@ -640,40 +642,8 @@ INSERT INTO `peminjaman` (`id_pinjam`, `id_anggota`, `id_buku`, `tgl_pinjam`, `t
 ('P2402009', 'A240358', 'BKU001', '2024-02-05', '2024-02-09', '0000-00-00', '1', 500, 'Dipinjam', 1),
 ('P2402010', 'A240360', 'BKU003', '2024-02-12', '2024-02-19', '0000-00-00', '0', 0, 'Dipinjam', 1),
 ('P2402012', 'A240360', 'BKU004', '2024-02-12', '2024-02-21', '2024-02-12', '0', 0, 'Dikembalikan', 1),
-('P2402014', 'A240354', 'BKU005', '2024-02-12', '2024-02-19', '0000-00-00', '0', 0, 'Dipinjam', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pengunjung`
---
-
-CREATE TABLE `pengunjung` (
-  `id_pengunjung` int(11) NOT NULL,
-  `nisn_nign` varchar(20) DEFAULT NULL,
-  `nama_lengkap` varchar(30) DEFAULT NULL,
-  `jurusan` varchar(25) DEFAULT NULL,
-  `jk` varchar(15) DEFAULT NULL,
-  `tempat_lhir` varchar(30) DEFAULT NULL,
-  `tgl_lahir` date DEFAULT NULL,
-  `alamat` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `pengunjung`
---
-
-INSERT INTO `pengunjung` (`id_pengunjung`, `nisn_nign`, `nama_lengkap`, `jurusan`, `jk`, `tempat_lhir`, `tgl_lahir`, `alamat`) VALUES
-(108, '0066792922', 'ADE GUNAWAN', 'AP', 'L', 'SERANG', '2006-07-22', 'Serang'),
-(109, '0062167723', 'AHMAD ALI MAHFUD', 'AP', 'L', 'SERANG', '2006-10-25', 'Serang'),
-(110, '0062167747', 'AHMAD SAEHUNA MULYA', 'AP', 'L', 'GARUT', '2006-04-28', 'Serang'),
-(111, '0064223961', 'ANISSA FITRIYANI', 'AP', 'P', 'SERANG', '2006-11-23', 'Serang'),
-(112, '0066790189', 'ASRI WINDRIATI', 'AP', 'P', 'KARANGANYAR', '2006-04-29', 'Serang'),
-(113, '0068972314', 'DESMIRANTI RAHMA', 'AP', 'P', 'SERANG', '2006-12-26', 'Serang'),
-(114, '0063814881', 'DEWI TRI UTAMI', 'AP', 'P', 'SERANG', '2006-03-02', 'Serang'),
-(115, '0058249530', 'FADLI FIRMANSYAH', 'AP', 'L', 'SERANG', '2005-01-27', 'Serang'),
-(116, '0066790219', 'HADIS AZAHRA SAIDINA', 'AP', 'P', 'SERANG', '2006-11-07', 'Serang'),
-(117, '0069471180', 'IFANA', 'AP', 'P', 'SERANG', '2006-03-31', 'Serang, Blok F2 No 9 Dalung GPA Cipocok Jaya Banten');
+('P2402014', 'A240354', 'BKU005', '2024-02-12', '2024-02-19', '0000-00-00', '0', 0, 'Dipinjam', 1),
+('P2402015', 'A240361', 'BKU001', '2024-02-12', '2024-02-19', '0000-00-00', '0', 0, 'Diperpanjang', 1);
 
 -- --------------------------------------------------------
 
@@ -689,7 +659,7 @@ CREATE TABLE `stok_opname` (
   `qty` int(11) DEFAULT NULL,
   `status` varchar(15) DEFAULT NULL,
   `tgl_catat` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `stok_opname`
@@ -710,17 +680,17 @@ CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `nama` varchar(30) DEFAULT NULL,
   `username` varchar(30) DEFAULT NULL,
-  `password` varchar(16) DEFAULT NULL,
+  `password` varchar(32) DEFAULT NULL,
   `level` enum('0','1') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_user`, `nama`, `username`, `password`, `level`) VALUES
-(2, 'Vina Noviantie, S.E., MM', 'admin', 'admin', '0'),
-(23, 'Siti Yayah Adawiyah, S.E', 'petugas', 'petugas', '1');
+(2, 'Vina Noviantie, S.E., MM', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0'),
+(23, 'Siti Yayah Adawiyah, S.E', 'petugas', 'afb91ef692fd08c445e8cb1bab2ccf9c', '1');
 
 -- --------------------------------------------------------
 
@@ -731,14 +701,14 @@ INSERT INTO `users` (`id_user`, `nama`, `username`, `password`, `level`) VALUES
 CREATE TABLE `whatsapp` (
   `id` int(11) NOT NULL,
   `token` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `whatsapp`
 --
 
 INSERT INTO `whatsapp` (`id`, `token`) VALUES
-(2, 'KzW!UUueqVLW7hNVJ9yz');
+(2, 'Aeb@!Ctdaoqiz4HoyNZ9');
 
 --
 -- Indexes for dumped tables
@@ -781,12 +751,6 @@ ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id_pinjam`);
 
 --
--- Indexes for table `pengunjung`
---
-ALTER TABLE `pengunjung`
-  ADD PRIMARY KEY (`id_pengunjung`) USING BTREE;
-
---
 -- Indexes for table `stok_opname`
 --
 ALTER TABLE `stok_opname`
@@ -825,12 +789,6 @@ ALTER TABLE `kategori`
 --
 ALTER TABLE `kunjungan`
   MODIFY `id_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `pengunjung`
---
-ALTER TABLE `pengunjung`
-  MODIFY `id_pengunjung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT for table `stok_opname`

@@ -188,7 +188,8 @@ function checkJumlahPeminjaman($koneksi, $id_anggota)
                                     $rak = "Rak : " . $data_buku['rak'];
                                     ?>
                                     <option value="<?php echo $id_buku ?>">
-                                        <?php echo $id_buku . " | " . $judul . " | " . $kategori . " | " . $rak ?></option>
+                                        <?php echo $id_buku . " | " . $judul . " | " . $kategori . " | " . $rak ?>
+                                    </option>
                                 <?php } ?>
                             </select>
 
